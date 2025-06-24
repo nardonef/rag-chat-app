@@ -1,4 +1,4 @@
-# 🏈 RAG Chat App
+# 🏈 Fantasy Football League RAG Chat App
 
 A Retrieval-Augmented Generation (RAG) application built with FastAPI that enables natural language querying over your data using LLMs and vector embeddings.
 

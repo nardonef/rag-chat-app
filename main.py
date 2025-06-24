@@ -3,6 +3,13 @@ from pydantic import BaseModel
 from ingestion.ingest import run_ingestion
 from vector.query_engine import get_query_engine
 
+import logging 
+import sys
+
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+
+
 app = FastAPI()
 
 
@@ -12,7 +19,9 @@ class QueryRequest(BaseModel):
 
 @app.post("/query")
 def query_vector_store(request: QueryRequest):
-    response = get_query_engine().query(request.question)
+    response = get_query_engine(request.question).query(
+        request.question,
+    )
     return {"response": str(response)}
 
 
