@@ -1,10 +1,9 @@
+import logging
+import sys
 from fastapi import FastAPI
 from pydantic import BaseModel
 from ingestion.ingest import run_ingestion
 from vector.query_engine import get_query_engine
-
-import logging 
-import sys
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))

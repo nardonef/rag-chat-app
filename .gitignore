@@ -16,4 +16,4 @@ wheels/
 data/
 
 # db
-chroma_db/
+# chroma_db/

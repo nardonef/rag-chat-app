@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 env:
-  PROJECT_ID: your-gcp-project-id
+  PROJECT_ID: fantasy-rag-464001
   REGION: us-east1
   REPO_NAME: rag-chat-app
   SERVICE_NAME: fantasy-rag
