@@ -3,12 +3,6 @@ provider "google" {
   region  = var.region
 }
 
-resource "google_artifact_registry_repository" "app_repo" {
-  repository_id = var.repo_id
-  format   = "DOCKER"
-  location = var.region
-}
-
 resource "google_cloud_run_service" "fantasy-rag" {
   name     = "fantasy-rag"
   location = var.region
