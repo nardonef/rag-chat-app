@@ -4,8 +4,7 @@ provider "google" {
 }
 
 resource "google_artifact_registry_repository" "app_repo" {
-  name     = var.repo_name
-  repository_id = "rag-chat-app"
+  repository_id = var.repo_id
   format   = "DOCKER"
   location = var.region
 }
