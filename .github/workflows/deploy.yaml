@@ -27,6 +27,11 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
       with:
         project_id: your-project-id
+    
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.6.6
 
     - name: Configure Docker for GCP
       run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
