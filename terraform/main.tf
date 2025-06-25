@@ -44,5 +44,5 @@ resource "google_cloud_run_service_iam_member" "invoker" {
   service  = google_cloud_run_service.fantasy-rag.name
   location = google_cloud_run_service.fantasy-rag.location
   role     = "roles/run.invoker"
-  member   = "allUsers"
+  member   = "allAuthenticatedUsers"
 }
