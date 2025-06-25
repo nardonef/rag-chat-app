@@ -4,6 +4,6 @@ variable "repo_name" {
   default = "fastapi-repo"
 }
 variable "image_url" {}
-variable "repository_id" {
+variable "repo_id" {
   default = "rag-chat-app"
 }
