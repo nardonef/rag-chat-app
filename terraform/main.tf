@@ -3,6 +3,13 @@ provider "google" {
   region  = var.region
 }
 
+terraform {
+  backend "gcs" {
+    bucket  = "terraform-state-fantasy-rag-464001-api"
+    prefix  = "cloudrun/fantasy-rag"
+  }
+}
+
 resource "google_cloud_run_service" "fantasy-rag" {
   name     = "fantasy-rag"
   location = var.region
